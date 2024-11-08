@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MVHS Hub</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <div id="top-bar">
+    <p id="clock">00:00:00</p>
+  </div>
+
+  <div id="class">
+    <div class="bar" id="class-bar">
+      <div class="completed" id="class-completed"></div>
+    </div>
+    <p class="name" id="class-name">Class</p>
+    <p class="timer" id="class-timer">0:00:00</p>
+  </div>
+
+  <div id="day">
+    <div class="bar" id="day-bar">
+      <div class="completed" id="day-completed"></div>
+    </div>
+    <p class="name" id="day-name">Day</p>
+    <p class="timer" id="day-timer">0:00:00</p>
+  </div>
+
+  <div class="lunch-select" id="lunch-select">
+    <p>What lunch do you have today?</p>
+    <button id="lunch-a">A</button>
+    <button id="lunch-b">B</button>
+  </div>
+
+  <div class="actions" id="actions">
+    <input id="googleSearch" type="text" placeholder="Search Google">
+    <button id="openCanvas">Open Canvas</button>
+    <button id="openChatGPT">Open ChatGPT</button>
+  </div>
+
+  <script defer type="text/javascript" src="/main.js"></script>
+</body>
+</html>

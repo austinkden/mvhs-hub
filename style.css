@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kode+Mono:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.35s ease;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #151618;
+}
+
+div#top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 20px -3px white;
+    height: 15vh;
+    width: 100vw;
+}
+
+p#clock {
+    color: black;
+    font-family: 'Kode Mono', monospace;
+    font-size: 75px;
+    font-weight: bold;
+    cursor: default;
+}
+
+p#clock:hover {
+    font-size: 90px;
+}
+
+
+.bar {
+    border: 3px white solid;
+    border-radius: 30px;
+    height: 80px;
+    width: 80vw;
+    overflow: hidden;
+    margin-top: 5vh;
+}
+
+.name {
+    color: white;
+    font-size: 18px;
+    float: left;
+    margin-left: 10px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    cursor: default;
+}
+
+.timer {
+    color: white;
+    font-size: 18px;
+    float: right;
+    margin-right: 10px;
+    font-family: 'Kode Mono', monospace;
+    cursor: default;
+}
+
+.timer:hover {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+div.lunch-select {
+    display: flex;
+    flex: row;
+    max-width: 80vw;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px 3px red;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+div.lunch-select p {
+    color: white;
+    font-size: 30px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-right: 5px;
+    cursor: default;
+}
+
+div.lunch-select button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 12px;
+    outline: none;
+    min-width: 50px;
+    min-height: 50px;
+    border: none;
+    background-color: #ADADAD;
+    cursor: pointer;
+}
+
+div.lunch-select button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+    border-radius: 16px;
+}
+
+div.completed {
+    height: 100%;
+    background-image: linear-gradient(to right, #16a8a3, #6759ff, #bc5ef2);
+    width: 0%;
+    transition: width 1.5s cubic-bezier(.21,.79,.46,1);
+}
+
+div.bar:hover {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+div.actions {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    display: none;
+}
+
+div.actions input {
+    padding: 15px 20px 15px 20px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    width: 15vw;
+    border-radius: 25px;
+    outline: none;
+    border: solid white 2px;
+    background-color: #2e3137;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+div.actions button {
+    padding: 15px 20px 15px 20px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    width: 30vw;
+    border-radius: 25px;
+    outline: none;
+    border: solid white 2px;
+    background-color: #2e3137;
+    font-size: 25px;
+    width: 15vw;
+    color: white;
+    cursor: pointer;
+}
+
+div.actions input::placeholder {
+    color: #808080;
+}
+
+div.actions input:hover {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px #16a8a3;
+    border: solid #16a8a3 2px;
+    width: 30vw;
+    text-align: left;
+    filter: brightness(1.15);
+}
+
+div.actions input:focus {
+    border-radius: 10px;
+    width: 30vw;
+    text-align: left;
+    box-shadow: 0px 0px 5px 0px #16a8a3;
+    border: solid #16a8a3 2px;
+}
+
+#openCanvas:focus, #openCanvas:hover {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px #6759ff;
+    border: solid #6759ff 2px;
+    filter: brightness(1.15);
+}
+
+#openChatGPT:focus, #openChatGPT:hover {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px #bc5ef2;
+    border: solid #bc5ef2 2px;
+    filter: brightness(1.15);
+}
