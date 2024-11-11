@@ -229,9 +229,8 @@ setInterval(() => {
   const now = new Date();
   const hours = now.getHours().toString().padStart(2, '0');
   const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-  clock.textContent = `${hours}:${minutes}:${seconds}`;
-}, 25);
+  clock.textContent = `${hours}:${minutes}`;
+}, 500);
 
 // --------------------------------------------------------------------------- Day Bar
 
@@ -256,7 +255,7 @@ if ((dayOfWeek === 1) || (dayOfWeek === 3) || (dayOfWeek === 5)) {
         dayCompletedElement.style.width = "0%";
       }
 
-    }, 50);
+    }, 1000);
   }
 }
 
@@ -281,13 +280,13 @@ if ((dayOfWeek === 2) || (dayOfWeek === 4)) {
         dayCompletedElement.style.width = "0%";
       }
 
-    }, 50);
+    }, 1000);
   }
 }
 
 // --------------------------------------------------------------------------- Class Bar with Class Timer
 
-function classBar() {setInterval(classBar, 100);
+function classBar() {setInterval(classBar, 500);
 
   if (dayOfWeek === 1 || dayOfWeek === 3) {
     if (totalSeconds >= mwClass1start && totalSeconds < mwClass1end) {
@@ -392,7 +391,7 @@ function updateClassBar(start, end) {
       classCompletedElement.style.width = "0%";
       classTimerElement.textContent = "00:00:00";
     }
-  }, 50);
+  }, 500);
 }
 
 // --------------------------------------------------------------------------- Actions
